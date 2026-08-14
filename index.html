@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>تصميم موهو | Moho Design — تنسيق .mo وأنظمة التصميم</title>
+    <meta name="description" content="تصميم موهو هو تنسيق مفتوح لملفات .mo ومحوّل TypeScript لأنظمة تصميم قابلة للنقل، متاحة الوصول، وداعمة للاتجاه RTL، مع إخراج CSS وJSON." />
+    <meta name="keywords" content="Moho Design, تصميم موهو, .mo design format, design tokens, TypeScript design system, CSS variables, RTL design system" />
+    <link rel="canonical" href="https://mohoai.github.io/moho-design/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="تصميم موهو | Moho Design" />
+    <meta property="og:description" content="تنسيق .mo ومحوّل TypeScript لبناء أنظمة تصميم موحّدة وقابلة للتحقق." />
+    <meta property="og:url" content="https://mohoai.github.io/moho-design/" />
+    <meta property="og:site_name" content="MOHOAI" />
+    <meta name="twitter:card" content="summary" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareSourceCode",
+        "name": "Moho Design",
+        "alternateName": "تصميم موهو",
+        "description": "Open-source .mo design token format and TypeScript compiler for portable, accessible, RTL-ready design systems.",
+        "codeRepository": "https://github.com/MOHOAI/moho-design",
+        "url": "https://mohoai.github.io/moho-design/",
+        "downloadUrl": "https://www.npmjs.com/package/moho-design",
+        "programmingLanguage": ["TypeScript", "JavaScript"],
+        "runtimePlatform": "Node.js 18+",
+        "license": "https://opensource.org/licenses/MIT",
+        "version": "0.2.0",
+        "author": { "@type": "Organization", "name": "MOHOAI", "url": "https://github.com/MOHOAI" },
+        "keywords": ["design tokens", "design system", "CSS variables", "RTL", "TypeScript", "mo file"]
+      }
+    </script>
+    <style>
+      :root { color-scheme: light; --ink: #17202a; --muted: #52606d; --brand: #6750a4; --surface: #f8f6ff; --line: #e2dff0; }
+      * { box-sizing: border-box; }
+      body { margin: 0; color: var(--ink); background: #fff; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.75; }
+      main { width: min(1080px, calc(100% - 32px)); margin: auto; }
+      header { padding: 76px 0 48px; background: linear-gradient(135deg, #f8f6ff 0%, #fff 58%); border-bottom: 1px solid var(--line); }
+      .eyebrow { color: var(--brand); font-weight: 700; letter-spacing: .04em; }
+      h1 { font-size: clamp(2.3rem, 6vw, 4.8rem); line-height: 1.08; margin: 12px 0 20px; max-width: 820px; }
+      h2 { margin-top: 48px; line-height: 1.25; }
+      .lead { color: var(--muted); font-size: 1.2rem; max-width: 760px; }
+      .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+      .button { display: inline-block; padding: 10px 18px; border-radius: 999px; text-decoration: none; border: 1px solid var(--brand); color: var(--brand); font-weight: 700; }
+      .button.primary { background: var(--brand); color: #fff; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 22px; }
+      .card { padding: 20px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
+      .card h3 { margin-top: 0; }
+      pre { direction: ltr; text-align: left; overflow: auto; background: #17131f; color: #f6f2ff; padding: 20px; border-radius: 14px; }
+      code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      footer { margin-top: 64px; padding: 28px 0 48px; color: var(--muted); border-top: 1px solid var(--line); }
+      a { color: var(--brand); }
+    </style>
+  </head>
+  <body>
+    <header>
+      <main>
+        <div class="eyebrow">MOHOAI · الإصدار 0.2.0</div>
+        <h1>تصميم موهو<br /><span lang="en">Moho Design</span></h1>
+        <p class="lead">تنسيق مفتوح لملفات <code>.mo</code> ومحوّل TypeScript/JavaScript لبناء أنظمة تصميم موحّدة، قابلة للنقل، متاحة الوصول، وداعمة للاتجاه RTL. اكتب مصدر التصميم مرة واحدة، ثم حوّله إلى CSS أو JSON أو استخدمه من API مباشرة.</p>
+        <div class="actions">
+          <a class="button primary" href="https://www.npmjs.com/package/moho-design">التثبيت من npm</a>
+          <a class="button" href="https://github.com/MOHOAI/moho-design">استعراض GitHub</a>
+          <a class="button" href="https://github.com/MOHOAI/moho-design/blob/master/examples/moho-default.mo">فتح مثال .mo</a>
+        </div>
+      </main>
+    </header>
+    <main>
+      <section aria-labelledby="about">
+        <h2 id="about">ما هو Moho Design؟</h2>
+        <p>ملف <code>.mo</code> هو مصدر تصميم آمن قابل للتحقق، وليس ملفًا تنفيذيًا. يصف الألوان والمسافات والطباعة والمكوّنات والحالات والاتجاه وإرشادات الوصول، بينما يتولى المترجم إنتاج مخرجات مناسبة لتطبيقات الويب.</p>
+        <div class="grid">
+          <article class="card"><h3>مصدر واحد</h3><p>اجمع design tokens والمكوّنات والتكاملات الوصفية في نموذج MO منظم.</p></article>
+          <article class="card"><h3>إخراج عملي</h3><p>حوّل الملف إلى CSS variables أو JSON، أو استورده من JavaScript وTypeScript.</p></article>
+          <article class="card"><h3>RTL و الوصول</h3><p>صمّم للعربية واللغات ثنائية الاتجاه مع حالات وصول موثقة.</p></article>
+          <article class="card"><h3>نواة صغيرة</h3><p>لا تثبّت النواة مئات المكتبات؛ توفر adapters اختيارية وكتالوجًا وصفيًا.</p></article>
+        </div>
+      </section>
+      <section aria-labelledby="quickstart">
+        <h2 id="quickstart">بدء سريع</h2>
+        <pre><code>npm install moho-design
+
+import { parseMo, compileMoToCss } from "moho-design";
+
+const source = await fetch("/design/moho-default.mo").then((r) =&gt; r.text());
+const design = parseMo(source);
+const css = compileMoToCss(design);</code></pre>
+      </section>
+      <section aria-labelledby="links">
+        <h2 id="links">الوثائق والمصادر</h2>
+        <p>يمكنك قراءة المواصفة، مراجعة سجل التغييرات، فحص الكتالوج المجاني، أو فتح مشكلة في المستودع. تظل رخصة كل تكامل خارجي منفصلة، ولا يعني ظهوره في الكتالوج أن كوده أُعيد توزيعه داخل الحزمة.</p>
+        <p><a href="https://github.com/MOHOAI/moho-design/blob/master/README.md">README الكامل</a> · <a href="https://github.com/MOHOAI/moho-design/blob/master/schemas/mo.schema.json">مخطط MO</a> · <a href="https://github.com/MOHOAI/moho-design/blob/master/catalog/verified-free-catalog.json">الكتالوج</a> · <a href="https://github.com/MOHOAI/moho-design/issues">Issues</a></p>
+      </section>
+      <footer>
+        <p lang="en"><strong>Moho Design</strong> is an open-source .mo design token format and TypeScript compiler for portable, accessible, RTL-ready design systems.</p>
+        <p>الترخيص: MIT · الجهة: <a href="https://github.com/MOHOAI">MOHOAI</a></p>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mohoai.github.io/moho-design/sitemap.xml
