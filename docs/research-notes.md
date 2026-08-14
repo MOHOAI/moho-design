@@ -59,3 +59,24 @@
 5. [Material Design 3](https://m3.material.io/)
 6. [Material Symbols licensing and usage](https://developers.google.com/fonts/docs/material_symbols)
 7. [Radix UI](https://www.radix-ui.com/)
+
+
+## بحث التوسعة في 2026-08-14
+
+استُخدمت القوائم المرفقة كجرد أولي، ثم فُحصت npm Registry وواجهة بحث npms لاكتشاف أسماء الحزم الفعلية بدل افتراض أن اسم المشروع يساوي اسم حزمة npm. نتج عن التطبيع 604 أسماء مرشحة، وعن مطابقة البحث 450 حزمة فريدة، منها 389 حزمة ذات رخصة ضمن قائمة MOHO المسموح بها: MIT وISC وApache-2.0 وBSD-2-Clause وBSD-3-Clause و0BSD وCC0-1.0 وUnlicense وMPL-2.0 وZlib وWTFPL. هذه النتيجة دليل اكتشاف آلي وليست اعتمادًا قانونيًا نهائيًا؛ لذلك يوسم كل إدخال `catalog-only` ولا تُضمّن أي حزمة طرف ثالث داخل النواة.
+
+المصادر الخارجية المستخدمة:
+
+1. [npm Registry metadata API](https://registry.npmjs.org/)
+2. [npms package search API](https://api.npms.io/v2/search)
+3. [npm package.json documentation](https://docs.npmjs.com/cli/v12/configuring-npm/package-json/)
+4. [npm publishing documentation](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry)
+5. [GitHub CLI repository creation](https://cli.github.com/manual/gh_repo_create)
+6. [Material Design 3](https://m3.material.io/)
+7. [Material Symbols documentation](https://developers.google.com/fonts/docs/material_symbols)
+8. [MOHO font source repository](https://github.com/MOHOAI/moho-font)
+9. [Tailwind CSS source repository](https://github.com/tailwindlabs/tailwindcss)
+10. [Radix UI primitives](https://github.com/radix-ui/primitives)
+11. [Lucide source repository](https://github.com/lucide-icons/lucide)
+
+سياسة المشروع: لا تُعد عبارة «مجاني» كافية لإعادة توزيع كود أو أصول؛ يجب الاحتفاظ بالرخصة والمصدر والتحقق اليدوي من شروط كل مشروع قبل أي bundling أو adapter فعلي.

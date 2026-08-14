@@ -4,8 +4,8 @@ export interface MoTokenReference {
   $ref: string;
 }
 
-export type MoTokenValue = MoPrimitive | MoTokenReference | MoTokenValue[];
-
+export type MoTokenObject = { [key: string]: MoTokenValue };
+export type MoTokenValue = MoPrimitive | MoTokenReference | MoTokenValue[] | MoTokenObject;
 export type MoTokenMap = Record<string, MoTokenValue>;
 
 export type MoDirection = 'ltr' | 'rtl' | 'auto';
