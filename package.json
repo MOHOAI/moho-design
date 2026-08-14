@@ -32,7 +32,7 @@
   "bugs": {
     "url": "https://github.com/MOHOAI/moho-design/issues"
   },
-  "homepage": "https://github.com/MOHOAI/moho-design#readme",
+  "homepage": "https://mohoai.github.io/moho-design/",
   "engines": {
     "node": ">=18"
   },
