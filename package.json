@@ -1,13 +1,36 @@
 {
   "name": "moho-design",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "The Moho Design format, compiler, composition engine, and free integration catalog for portable accessible design systems.",
   "type": "module",
   "license": "MIT",
   "author": "MOHOAI",
+  "keywords": [
+    "moho",
+    "moho-design",
+    "design-system",
+    "design-tokens",
+    "design-token-format",
+    "dot-mo",
+    "mo-file",
+    "css-variables",
+    "typescript",
+    "javascript",
+    "accessible-design",
+    "rtl",
+    "right-to-left",
+    "material-design",
+    "component-tokens",
+    "design-system-tools",
+    "css",
+    "json"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MOHOAI/moho-design.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MOHOAI/moho-design/issues"
   },
   "homepage": "https://github.com/MOHOAI/moho-design#readme",
   "engines": {

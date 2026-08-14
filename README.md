@@ -1,6 +1,10 @@
 # تصميم موهو | Moho Design
 
-**تصميم موهو** هو تنسيق مصدر مفتوح لأنظمة التصميم، مع محلل ومحوّلات وواجهات TypeScript. يصف النظام السمات والألوان والطباعة والاتجاه والحالات والمكوّنات والتكاملات داخل ملف واحد بامتداد `.mo`، ثم يحوّل المصدر نفسه إلى CSS أو JSON أو واجهة برمجية قابلة للاستخدام في أي مشروع ويب.
+**تصميم موهو (Moho Design)** هو تنسيق مفتوح لملفات `.mo` وأنظمة التصميم، مع محلل ومحوّل TypeScript/JavaScript لإنشاء design tokens وCSS variables وJSON من مصدر واحد. يجمع النظام الألوان والطباعة والمسافات والاتجاه RTL/LTR والحالات والمكوّنات وإرشادات الوصول في ملف تصميم قابل للتحقق، ثم يتيح استعماله مباشرة في تطبيقات الويب دون تثبيت مئات المكتبات.
+
+للوصول السريع: [المستودع على GitHub](https://github.com/MOHOAI/moho-design) · [الحزمة على npm](https://www.npmjs.com/package/moho-design) · [مثال ملف `.mo`](https://github.com/MOHOAI/moho-design/blob/master/examples/moho-default.mo) · [سجل التغييرات](https://github.com/MOHOAI/moho-design/blob/master/CHANGELOG.md)
+
+> English summary: **Moho Design is an open-source `.mo` design token format and TypeScript compiler for portable, accessible, RTL-ready design systems.** It compiles a unified design source to CSS and JSON and provides optional adapters for the wider JavaScript ecosystem.
 
 > ملف `.mo` هو مصدر تصميم قابل للتحويل، وليس ملفًا تنفيذيًا. لا ينفّذ النظام كودًا أو قوالب أو تعليمات موجودة داخل الملف؛ بل يقرأ بنية JSON آمنة ويتحقق منها قبل التحويل.
 
