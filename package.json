@@ -59,6 +59,7 @@
     "moho": "dist/cli.cjs"
   },
   "scripts": {
+    "prepare": "npm run build",
     "build": "tsup",
     "test": "npm run build && node --test tests/*.test.mjs tests/*.test.cjs",
     "format:check": "node --check tests/*.test.mjs",
