@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/MOHOAI/moho-design/blob/main/schemas/mo.schema.json",
+  "title": "Moho Design Source",
+  "type": "object",
+  "required": ["moho", "version", "name", "tokens"],
+  "properties": {
+    "moho": { "const": "mo" },
+    "version": { "const": "1.0" },
+    "name": { "type": "string", "minLength": 1 },
+    "description": { "type": "string" },
+    "license": { "type": "string" },
+    "direction": { "enum": ["ltr", "rtl", "auto"] },
+    "locale": { "type": "string" },
+    "tokens": { "$ref": "#/$defs/tokenMap" },
+    "typography": {
+      "type": "object",
+      "properties": {
+        "families": { "type": "array", "items": { "type": "string" } },
+        "weights": { "type": "array", "items": { "type": "integer", "minimum": 1, "maximum": 1000 } },
+        "fallback": { "type": "array", "items": { "type": "string" } },
+        "fontSource": { "type": "string", "format": "uri" }
+      },
+      "additionalProperties": false
+    },
+    "components": { "type": "object", "additionalProperties": { "$ref": "#/$defs/component" } },
+    "integrations": { "type": "array", "items": { "$ref": "#/$defs/integration" } },
+    "metadata": { "type": "object" }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "tokenValue": {
+      "anyOf": [
+        { "type": ["string", "number", "boolean", "null"] },
+        { "type": "array", "items": { "$ref": "#/$defs/tokenValue" } },
+        { "type": "object", "required": ["$ref"], "properties": { "$ref": { "type": "string" } }, "additionalProperties": false }
+      ]
+    },
+    "tokenMap": { "type": "object", "additionalProperties": { "$ref": "#/$defs/tokenValue" } },
+    "component": {
+      "type": "object",
+      "properties": {
+        "description": { "type": "string" },
+        "parts": { "type": "array", "items": { "type": "string" } },
+        "tokens": { "$ref": "#/$defs/tokenMap" },
+        "states": { "type": "object", "additionalProperties": { "type": "object" } },
+        "accessibility": { "type": "object" }
+      },
+      "additionalProperties": false
+    },
+    "integration": {
+      "type": "object",
+      "required": ["name", "purpose", "license", "source"],
+      "properties": {
+        "name": { "type": "string" },
+        "purpose": { "type": "string" },
+        "license": { "type": "string" },
+        "source": { "type": "string", "format": "uri" },
+        "optional": { "type": "boolean" },
+        "redistribution": { "enum": ["allowed", "link-only", "unknown"] }
+      },
+      "additionalProperties": false
+    }
+  }
+}

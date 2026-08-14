@@ -1,0 +1,112 @@
+{
+  "policy": "Only open-source or freely redistributable integrations with a documented license are listed. Entries are link-only unless a future adapter explicitly says otherwise.",
+  "integrations": [
+    {
+      "name": "moho-font",
+      "category": "arabic-typography",
+      "license": "MIT for library code; each font retains its own license",
+      "source": "https://github.com/MOHOAI/moho-font",
+      "redistribution": "link-only"
+    },
+    {
+      "name": "Material Design 3",
+      "category": "design-system-reference",
+      "license": "Open-source design system reference",
+      "source": "https://m3.material.io/",
+      "redistribution": "link-only"
+    },
+    {
+      "name": "Material Symbols",
+      "category": "icons",
+      "license": "Apache-2.0",
+      "source": "https://developers.google.com/fonts/docs/material_symbols",
+      "redistribution": "allowed-with-license"
+    },
+    {
+      "name": "Tailwind CSS",
+      "category": "css",
+      "license": "MIT",
+      "source": "https://github.com/tailwindlabs/tailwindcss",
+      "redistribution": "link-only"
+    },
+    {
+      "name": "Radix UI",
+      "category": "accessible-components",
+      "license": "MIT",
+      "source": "https://github.com/radix-ui/primitives",
+      "redistribution": "link-only"
+    },
+    {
+      "name": "Lucide",
+      "category": "icons",
+      "license": "ISC",
+      "source": "https://github.com/lucide-icons/lucide",
+      "redistribution": "link-only"
+    },
+    {
+      "name": "KaTeX",
+      "category": "math",
+      "license": "MIT",
+      "source": "https://github.com/KaTeX/KaTeX",
+      "redistribution": "link-only"
+    },
+    {
+      "name": "Mermaid",
+      "category": "diagrams",
+      "license": "MIT",
+      "source": "https://github.com/mermaid-js/mermaid",
+      "redistribution": "link-only"
+    },
+    {
+      "name": "Chart.js",
+      "category": "charts",
+      "license": "MIT",
+      "source": "https://github.com/chartjs/Chart.js",
+      "redistribution": "link-only"
+    },
+    {
+      "name": "D3.js",
+      "category": "data-visualization",
+      "license": "ISC",
+      "source": "https://github.com/d3/d3",
+      "redistribution": "link-only"
+    },
+    {
+      "name": "Three.js",
+      "category": "3d-graphics",
+      "license": "MIT",
+      "source": "https://github.com/mrdoob/three.js",
+      "redistribution": "link-only"
+    },
+    {
+      "name": "Leaflet",
+      "category": "maps",
+      "license": "BSD-2-Clause",
+      "source": "https://github.com/Leaflet/Leaflet",
+      "redistribution": "link-only"
+    },
+    {
+      "name": "axe-core",
+      "category": "accessibility-testing",
+      "license": "MPL-2.0",
+      "source": "https://github.com/dequelabs/axe-core",
+      "redistribution": "dev-only"
+    },
+    {
+      "name": "Reveal.js",
+      "category": "web-presentations",
+      "license": "MIT",
+      "source": "https://github.com/hakimel/reveal.js",
+      "redistribution": "link-only"
+    }
+  ],
+  "excludedExamples": [
+    "Tailwind UI",
+    "Adobe Fonts",
+    "Kendo UI",
+    "DevExpress Web Controls",
+    "Highcharts commercial features",
+    "Mapbox hosted services",
+    "8th Wall"
+  ]
+}

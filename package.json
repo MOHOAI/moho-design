@@ -1,0 +1,50 @@
+{
+  "name": "moho-design",
+  "version": "0.1.0",
+  "description": "The Moho Design format and compiler for portable, accessible design systems.",
+  "type": "module",
+  "license": "MIT",
+  "author": "MOHOAI",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MOHOAI/moho-design.git"
+  },
+  "homepage": "https://github.com/MOHOAI/moho-design#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist",
+    "examples",
+    "schemas",
+    "catalog",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "bin": {
+    "moho": "dist/cli.cjs"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "npm run build && node --test tests/*.test.mjs tests/*.test.cjs",
+    "format:check": "node --check tests/*.test.mjs",
+    "pack:check": "npm pack --dry-run",
+    "publish:check": "npm publish --dry-run"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.3"
+  }
+}
